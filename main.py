@@ -188,7 +188,7 @@ async def clear(ctx: Context, which: Literal["finished", "cancelled", "all"]):
     await ctx.send(f"Cleared selected {ctx.message.author.mention}'s tasks {emoji.emojize('🧹')}")
 
 
-@bot.command
+@bot.command()
 async def ping(ctx: Context):
     await ctx.send(f"pong {round(bot.latency * 1000)}ms\n")
 
