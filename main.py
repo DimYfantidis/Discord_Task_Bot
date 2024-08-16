@@ -24,7 +24,7 @@ def obscure(obj: Any) -> str:
 
 dotenv.load_dotenv("variables.env")
 MAX_NUMBER_OF_TASKS = int(os.getenv("MAX_NUMBER_OF_TASKS"))
-COMMAND_PREFIX = os.getenv("MAX_NUMBER_OF_TASKS")
+COMMAND_PREFIX = os.getenv("COMMAND_PREFIX")
 
 intents = discord.Intents.default()
 intents.message_content = True
