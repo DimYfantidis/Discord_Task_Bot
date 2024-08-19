@@ -86,11 +86,11 @@ async def task(ctx: Context, action: Literal["add", "finished", "cancel"], descr
         if action[0] == 'f':
             # Case 1: Task Completion
             action_code = FINISHED
-            action_message = f"Successfully finished task {emoji.emojize('💪')}"
+            action_message = f"**{ctx.message.author.name}** has successfully finished task **#{description}** {emoji.emojize('💪')}"
         else:
             # Case 2: Task Cancellation
             action_code = CANCELLED
-            action_message = f"Task {description} has been cancelled {emoji.emojize('😴💤')}"
+            action_message = f"**{ctx.message.author.name}** cancelled task **#{description}** {emoji.emojize('😴💤')}"
 
         with open(filepath, "rb") as fp:
             # Loads the user's task history
